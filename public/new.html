@@ -20,17 +20,13 @@
 		<div id="intro-fold">
 			<div class="wrapper">
 			<span class="table"><span class="cell">
-				<h1>Get paid for giving a shit.</h1>
+				<h1 class="pagename"></h1>
 			</span></span>
 			</div>
 		</div>
 		<div class="section wrapper">
-			<h1>Get paid for giving a shit.</h1>
+			<h1 class="pagename"></h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum numquam sed optio, distinctio autem blanditiis, unde libero necessitatibus. Quibusdam fugiat quidem dicta, odio, nihil reiciendis voluptatem similique enim eveniet?</p>
-			<p>Fugiat voluptates nesciunt dolorem provident autem eum esse veritatis culpa, suscipit impedit, nisi saepe cum, vel aperiam aut tempore eaque accusamus eligendi, beatae laboriosam! Iusto architecto nostrum non id alias?</p>
-			<p>Perferendis quas impedit voluptatem temporibus dicta unde, dolor aliquid incidunt laboriosam nemo sapiente. Reiciendis quos illum, ea, minus dolor repudiandae aliquid ab magni, aliquam quidem labore consectetur fugit tempora nulla?</p>
-			<p>Aut cupiditate illum odio iste vitae in itaque dolore dolorem cum et officia minima asperiores doloremque consectetur, reprehenderit dolores nemo qui modi quae voluptas voluptate aliquid! Rem temporibus, quas officia!</p>
-			<p>Maiores, quasi optio ad iusto sint aliquid, quaerat blanditiis aspernatur maxime accusantium quos cumque quo, itaque eaque, nam dolorem voluptate quam tempora culpa sit accusamus fugiat tempore. Officia, voluptatibus, debitis?</p>
 		</div>
 	</div>
 	<div id="overlay" onclick="maskClick()"></div>
@@ -41,6 +37,12 @@
 			</a>
 		</div>
 	</nav>
+	<script>
+		var names = window.location.pathname.split('/');
+		var pagename = names[names.length - 1].replace(/-/g,' ');
+		document.getElementsByClassName('pagename')[0].innerHTML = pagename;
+		document.getElementsByClassName('pagename')[1].innerHTML = pagename;
+	</script>
 	<script src="/scripts/main.js"></script>
 </body>
 </html>
