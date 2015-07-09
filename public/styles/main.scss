@@ -1,11 +1,12 @@
 @import "fonts.css";
 
-/* Colors */
+/* Sass variables */
 
 $magenta: #ec008c;
 $gray: #eee;
 $tblack: rgba(0, 0, 0, 0.5);
 
+/* General styles */
 html{
   height: 100%;
 }
@@ -28,6 +29,7 @@ p{
   margin-bottom: 30px;
 }
 
+/* Header styles */
 header{
     background-color: $magenta;
     height: 72px;
@@ -41,6 +43,7 @@ header{
     }
 }
 
+/* Toggle open icon */
 #toggle-open{
   display: none;
   padding: 20px 24px;
@@ -56,6 +59,7 @@ header{
   }
 }
 
+/* Styles for logo */
 .logo{
   padding: 24px;
   margin-right: 24px;
@@ -80,6 +84,7 @@ header{
   }
 }
 
+/* Header menu */
 #menu{
   &>ul{
     float: left;
@@ -195,6 +200,7 @@ header{
 
 /* Offcanvas - Side Navigation Menu - by urzolaj */
 
+/* Page container */
 #container {
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
@@ -205,8 +211,8 @@ header{
   padding-top: 72px;
 }
 
+/* Translucent mask */
 #overlay {
-  /*display: none;*/
   visibility: hidden;
   height: calc(100% - 72px);
   width: 100%;
@@ -219,7 +225,6 @@ header{
   -o-transition: opacity .3s ease, visibility .3s ease;
   transition: opacity .3s ease, visibility .3s ease;
   &.visible{
-    /*display: block;*/
     visibility: visible;
     opacity: 0.5;
     left: 0;
@@ -228,6 +233,7 @@ header{
   }
 }
 
+/* Side navigation menu */
 #offcanvas{
   background-color: white;
   box-sizing: border-box;

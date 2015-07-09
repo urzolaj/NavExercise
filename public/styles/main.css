@@ -1,5 +1,6 @@
 @import url(fonts.css);
-/* Colors */
+/* Sass variables */
+/* General styles */
 html {
   height: 100%; }
 
@@ -15,9 +16,10 @@ a {
 
 p {
   color: black;
-  font: 24px/36px Galaxie;
+  font: 24px/36px Galaxie, serif;
   margin-bottom: 30px; }
 
+/* Header styles */
 header {
   background-color: #ec008c;
   height: 72px;
@@ -29,6 +31,7 @@ header {
     display: block;
     clear: both; }
 
+/* Toggle open icon */
 #toggle-open {
   display: none;
   padding: 20px 24px;
@@ -42,6 +45,7 @@ header {
     height: 20px;
     color: transparent; }
 
+/* Styles for logo */
 .logo {
   padding: 24px;
   margin-right: 24px;
@@ -62,6 +66,7 @@ header {
     .logo:hover span {
       background-position: center; }
 
+/* Header menu */
 #menu > ul {
   float: left; }
   #menu > ul > li {
@@ -78,7 +83,7 @@ header {
     #menu > ul > li.open ul {
       max-height: 400px; }
     #menu > ul > li > a {
-      font: 21px/72px HUGEAvantGardeBold;
+      font: 21px/72px HUGEAvantGardeBold, sans-serif;
       padding: 0 24px;
       display: inline-block;
       background-color: #ec008c;
@@ -106,7 +111,7 @@ header {
         #menu > ul > li ul > li:last-of-type {
           margin-bottom: 12px; }
         #menu > ul > li ul > li > a {
-          font: 16px/48px Galaxie;
+          font: 16px/48px Galaxie, serif;
           color: black;
           padding: 0 24px;
           display: block;
@@ -135,7 +140,7 @@ header {
   #intro-fold .cell {
     padding: 0 100px; }
   #intro-fold h1 {
-    font: 120px/132px HUGEAvantGardeBold;
+    font: 120px/132px HUGEAvantGardeBold, sans-serif;
     letter-spacing: -0.02em;
     text-align: center;
     color: white; }
@@ -152,6 +157,7 @@ header {
   display: none; }
 
 /* Offcanvas - Side Navigation Menu - by urzolaj */
+/* Page container */
 #container {
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
@@ -161,8 +167,8 @@ header {
   height: 100%;
   padding-top: 72px; }
 
+/* Translucent mask */
 #overlay {
-  /*display: none;*/
   visibility: hidden;
   height: calc(100% - 72px);
   width: 100%;
@@ -175,13 +181,13 @@ header {
   -o-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease; }
   #overlay.visible {
-    /*display: block;*/
     visibility: visible;
     opacity: 0.5;
     left: 0;
     position: fixed;
     top: 72px; }
 
+/* Side navigation menu */
 #offcanvas {
   background-color: white;
   box-sizing: border-box;
@@ -263,7 +269,7 @@ header {
         #offcanvas .scroller > ul > li a:hover {
           background-color: #eee; }
         #offcanvas .scroller > ul > li > a {
-          font: 21px/48px HUGEAvantGardeBold;
+          font: 21px/48px HUGEAvantGardeBold, sans-serif;
           padding: 0 24px; }
         #offcanvas .scroller > ul > li ul {
           display: block;
@@ -275,7 +281,7 @@ header {
           #offcanvas .scroller > ul > li ul > li {
             text-align: left; }
             #offcanvas .scroller > ul > li ul > li > a {
-              font: 16px/48px Galaxie;
+              font: 16px/48px Galaxie, serif;
               color: black;
               padding: 0 24px;
               display: block;
@@ -284,7 +290,7 @@ header {
               #offcanvas .scroller > ul > li ul > li > a:hover {
                 color: #ec008c; }
     #offcanvas .scroller .copy {
-      font: 12px/48px "Helvetica Neue", Helvetica;
+      font: 12px/48px "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       display: block;
       padding-left: 24px; }
 
@@ -337,7 +343,7 @@ header {
     padding-top: 47px; }
   .section h1 {
     display: inline-block;
-    font: 44px/48px HUGEAvantGardeBold;
+    font: 44px/48px HUGEAvantGardeBold, sans-serif;
     margin-bottom: 32px; }
   #overlay {
     height: calc(100% - 60px); }

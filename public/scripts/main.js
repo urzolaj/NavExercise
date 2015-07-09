@@ -1,7 +1,9 @@
+/** Global variables */
 container = document.getElementById('container');
 offcanvas = document.getElementById('offcanvas');
 overlay = document.getElementById('overlay');
 
+/** Setting AJAX requests */
 var xmlhttp = new XMLHttpRequest();
 
 xmlhttp.onreadystatechange = function() {
@@ -17,6 +19,7 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", '/api/nav.json', true);
 xmlhttp.send();
 
+/** Populating data for navigation menus */
 function handleData(navText) {
 
 	function generateMenu(items) {
@@ -62,6 +65,7 @@ function handleData(navText) {
 	offcanvas.appendChild(scroller);
 }
 
+/** This function Closes menu dropdowns on header */
 function closeDropdowns(){
 	var dropdowns = document.getElementsByClassName('dropdown');
 	for (var i=0; i < dropdowns.length; i++){
@@ -72,6 +76,7 @@ function closeDropdowns(){
 	}
 }
 
+/** This function shows/hides the offcanvas menu */
 function toggleMenu() {
 	if (container.className == 'nav') {
 		overlay.className = '';
@@ -88,6 +93,7 @@ function toggleMenu() {
 	}	
 }
 
+/** This function shows/hides the secondary navigation menus */
 function toggleOpen(item) {
 	var className = ' ' + item.className + ' ';
 	fromHeader = false;
@@ -108,6 +114,7 @@ function toggleOpen(item) {
     }
 }
 
+/** This function listen click events on the traslucent overlay */
 function maskClick(){
 	if (offcanvas.className == 'visible') {
 		toggleMenu();
@@ -118,6 +125,7 @@ function maskClick(){
 	overlay.className = '';
 }
 
+/** This function sends an AJAX request when loading a new page */
 function openNew(item) {
 	console.log('Clicking on '+item.href+' page link');
 	xmlhttp.open("GET",item.href, true);
